@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帧动画生成工具</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="custom-menu-wrapper">
+        <div class="pure-menu custom-menu custom-menu-top">
+            <a href="#" class="pure-menu-heading custom-menu-brand">帧动画生成工具</a>
+            <a href="#" class="custom-menu-toggle" id="toggle">
+                <s class="bar"></s>
+                <s class="bar"></s>
+            </a>
+        </div>
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+            <div class="custom-menu-screen"></div>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">生成</a></li>
+                <li class="pure-menu-item"><a href="document.html" class="pure-menu-link">说明</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <h1>帧动画生成工具</h1>
+        <p>根据Adobe Edge和fullpage生成全屏动画单页，最多不超过8帧。</p>
+        <form class="pure-form pure-form-aligned" name="frameAnimation" id="frameAnimation">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="name">名称</label>
+                    <input class="pure-input-2-3" id="name" type="text" placeholder="name">
+                </div>
+                <div class="choose-box" data-choose="path">
+                    <div class="pure-control-group choose-radio">
+                        <label for="chooseBgMusic">背景音乐路径</label>
+                        <input type="radio" name="chooseBgMusic" value="path" checked> 路径
+                        <input type="radio" name="chooseBgMusic" value="upload"> 上传
+                    </div>
+                    <div class="pure-control-group choose-data data-path">
+                        <label for="backgroundMusicPath"></label>
+                        <input class="pure-input-2-3" name="backgroundMusicPath" type="text" placeholder="请填入路径">
+                    </div>
+                    <div class="pure-control-group choose-data data-upload">
+                        <label for="uploadBgMusic"></label>
+                        <input type="file" name="uploadBgMusic">
+                    </div>
+                </div>
+
+                <div class="frames">
+                    <div class="frame frame_0">
+                        <p>
+                            第1帧：
+                            <button class="button-error pure-button button-xsmall">
+                                <i class="fa fa-close"></i> 删除帧
+                            </button>
+                        </p>
+                        <div class="choose-box" data-choose="path">
+                            <div class="pure-control-group choose-radio">
+                                <label>图片路径</label>
+                                <input type="radio" name="chooseImagePath_0" value="path" checked> 路径
+                                <input type="radio" name="chooseImagePath_0" value="upload"> 上传
+                            </div>
+                            <div class="pure-control-group choose-data data-path">
+                                <label for="imagePath_0"></label>
+                                <input class="pure-input-2-3" id="imagePath_0" name="imagePath_0" type="text" placeholder="请填入路径">
+                            </div>
+                            <div class="pure-control-group choose-data data-upload">
+                                <label for="imageUpload_0"></label>
+                                <input type="file" id="imageUpload_0" name="imageUpload_0">
+                            </div>
+                        </div>
+                        <div class="choose-box" data-choose="path">
+                            <div class="pure-control-group choose-radio">
+                                <label>动画声音路径</label>
+                                <input type="radio" name="chooseMediaPath_0" value="path" checked> 路径
+                                <input type="radio" name="chooseMediaPath_0" value="upload"> 上传
+                            </div>
+                            <div class="pure-control-group choose-data data-path">
+                                <label for="mediaPath_0"></label>
+                                <input class="pure-input-2-3" id="mediaPath_0" name="mediaPath_0" type="text" placeholder="请填入路径">
+                            </div>
+                            <div class="pure-control-group choose-data data-upload">
+                                <label for="mediaUpload_0"></label>
+                                <input type="file" id="mediaUpload_0" name="mediaUpload_0">
+                            </div>
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="frame_html_0">调用html</label>
+                            <textarea class="pure-input-2-3" id="frame_html_0" name="frame_html_0" rows="3" cols="20" placeholder="请将文件后缀为.html的文件内容拷贝到此处"></textarea>
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="frame_edge_js_0">帧js</label>
+                            <textarea class="pure-input-2-3" id="frame_edge_js_0" name="frame_edge_js_0" rows="3" cols="20" placeholder="请将文件名后面为_edge.js的文件内容拷贝到此处"></textarea>
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="frame_edgeAction_js_0">帧动画js</label>
+                            <textarea class="pure-input-2-3" id="frame_edgeAction_js_0" name="frame_edgeAction_js_0" rows="3" cols="20" placeholder="请将文件名后面为_edgeAction.js的文件内容拷贝到此处"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button class="button-secondary pure-button">
+                    <i class="fa fa-plus"></i> 添加帧
+                </button>
+                <div class="pure-controls">
+                    <!-- <label for="cb" class="pure-checkbox">
+                        <input id="cb" type="checkbox"> I've read the terms and conditions
+                    </label> -->
+                    <button class="pure-button clear-button">
+                        <i class="fa fa-trash"></i> 清空内容
+                    </button>
+                    <button class="pure-button pure-button-primary submit-button">生成预览文件</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/Blob.js"></script>
+    <script type="text/javascript" src="js/canvas-toBlob.js"></script>
+    <script type="text/javascript" src="js/FileSaver.js"></script>
+    <script type="text/javascript" src="js/code.js"></script>
+    <script type="text/javascript" src="js/detect.js"></script>
+    <script type="text/javascript" src="js/handle.js"></script>
+</body>
+
+</html>

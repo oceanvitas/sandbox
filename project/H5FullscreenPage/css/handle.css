@@ -1,0 +1,36 @@
+ html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: arial;
+    text-align: center;
+}
+
+* {
+    margin:0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+.item2 {
+    background-color: #0067A6;
+}
+.item1 {
+    background-color: #00ABD8;
+}
+.item3 {
+    background-color: #008972;
+}
+.item4 {
+    background-color: #F5C564;
+}
+.item5 {
+    background-color: #F2572D;
+}
+.item6 {
+    background-color: #0067A6;
+} 
+.edgeLoad-EDGE-109228010 { visibility:hidden; }
+.edgeLoad-EDGE-16882217 { visibility:hidden; }   
