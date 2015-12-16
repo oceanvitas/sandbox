@@ -200,4 +200,6 @@
 
 /*page style start*/
 .data-upload{ display: none;}
+.red{ color: red;}
+.cur-menu{ background: #333;}
 /*page style end*/

@@ -1,9 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>说明</title>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帧动画生成工具</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="custom-menu-wrapper">
+        <div class="pure-menu custom-menu custom-menu-top">
+            <a href="#" class="pure-menu-heading custom-menu-brand">帧动画生成工具</a>
+            <a href="#" class="custom-menu-toggle" id="toggle">
+                <s class="bar"></s>
+                <s class="bar"></s>
+            </a>
+        </div>
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+            <div class="custom-menu-screen"></div>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">生成</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">说明</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <h1>帧动画滑屏工具说明</h1>
+        <h3>步骤：</h3>
+        <p>
+            1.新建一个文件夹，将生成的文件都放在文件夹内。
+        </p>
+        <p>
+            2.双击index.html文件，将在浏览器看到预览。
+        </p>
+        <p>
+            3.如需修改，请重新输入，将生成的文件覆盖上次生成的。
+        </p>
+
+        <h3>注意：</h3>
+        <p>
+            1.在制作Adobe Edge动画的过程中，每一个动画的<span class="red">W(宽)、H(高)、最小宽、最大宽、溢出都需要保持一致</span>，否则会导致滑屏过程中动画宽高互相影响。
+        </p>
+        <p>
+            2.动画制作过程中<span class="red">“组件类”不能修改为其他值，请保持默认</span>。
+        </p>
+        <p>
+            <img src="images/explain0.png">
+        </p>
+        <p>
+            3.生成的动画文件夹里面，确保图片都在<span class="red">images</span>文件夹，媒体文件都在<span class="red">media</span>文件夹内，否则，重新在Adobe Edge里面插入图片。<br>
+            不在images和media里面的图片和内容，将不可见。
+        </p>
+        <p>
+            4.保存动画时，每个动画保存的<span class="red">名字不可重复</span>。
+        </p>
+        <p>
+            5.填写每一帧的图片和动画声音路径请确保正确，不需要加上图片和动画声音文件名。例如： <br >
+            "http://img.bumps.com/frameimg/" <br>
+            如果选择上传文件，则不需要填写。
+        </p>
+        <p>
+            6.“调用html”、“帧js”、“帧动画js”这几个选项需要输入完整的文件内容，请检查确认。
+        </p>
+
+
+    </div>
+    <script type="text/javascript">
+        //顶部菜单按钮事件
+        document.getElementById('toggle').addEventListener('click', function(e) {
+            document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+            document.getElementById('toggle').classList.toggle('x');
+        });
+    </script>
 </body>
+
 </html>
