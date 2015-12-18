@@ -8,7 +8,7 @@
     <style type="text/css">
     body {
         background-color: #fff;
-        background: url(img/index.png) no-repeat;
+        background: url(img/index.jpg) no-repeat;
         margin: 0px;
         height: 8151px;
         /*overflow: hidden;*/
@@ -89,7 +89,7 @@
             map: new THREE.Texture(particleImage)
         });
 
-        for (var i = 0; i < 80; i++) {
+        for (var i = 0; i < 160; i++) {
 
             particle = new Particle3D(material);
             particle.position.x = Math.random() * 2000 - 1000;
@@ -104,11 +104,11 @@
         container.appendChild(renderer.domElement);
 
 
-        document.addEventListener('mousemove', onDocumentMouseMove, false);
-        document.addEventListener('touchstart', onDocumentTouchStart, false);
-        document.addEventListener('touchmove', onDocumentTouchMove, false);
+        // document.addEventListener('mousemove', onDocumentMouseMove, false);
+        // document.addEventListener('touchstart', onDocumentTouchStart, false);
+        // document.addEventListener('touchmove', onDocumentTouchMove, false);
 
-        var animate = setInterval(loop, 1000 / 50);
+        var animate = setInterval(loop, 1000 / 30);
         var canvas = document.querySelector('canvas');
         var time = 15000;
         setTimeout(function () {

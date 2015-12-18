@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首单免邮</title>
+    <link rel="stylesheet" type="text/css" href="../../css/animate.min.css">
+    <style type="text/css">
+    body{ margin: 0;}
+    img{ max-width: 100%;}
+    .top{
+        position: relative;
+        overflow: hidden;
+        width: 96%;
+        margin: 20px auto;
+    }
+    .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bottom{
+        position: relative;
+        overflow: hidden;
+    }
+    .jump-button{
+        position: absolute;
+        width: 45%;
+        height: 13.5%;
+        top: 0%;
+        left: 27%;
+    }
+    .animated {
+      animation-duration: 1.5s;
+      animation-fill-mode: both;
+    }
+
+    .animated.infinite {
+      animation-iteration-count: infinite;
+    }
+    @keyframes pulse {
+      from {
+        transform: scale3d(1, 1, 1);
+      }
+
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    .pulse {
+      animation-name: pulse;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="document/top.png" class="bg animated infinite pulse">
+        <img src="document/word.png" class="word" />
+    </div>
+    <div class="bottom">
+        <img src="document/bottom.png">
+        <a href="#" class="jump-button"></a>
+    </div>
+</body>
+</html>
+
+<!-- word flipInX  zoomIn-->
+<!-- bg pulse rubberBand -->
