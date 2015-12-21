@@ -1,0 +1,119 @@
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html {
+    color: #000;
+    background: #FFF
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,legend,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+fieldset,img { border: 0}
+em,strong,th {
+    font-style: normal;
+    font-weight: normal
+}
+ol,ul { list-style: none}
+th { text-align: left}
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+input,textarea,select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    *font-size: 100%
+}
+
+/*reset end*/
+/*style start*/
+html {
+    font-size: 20px;
+    outline: 0;
+    -webkit-text-size-adjust:none;
+}
+body {
+    -webkit-user-select: none;
+    -webkit-box-sizing: border-box;
+                 box-sizing: border-box;
+    position: relative;
+}
+img { width: 100%;}
+.top,
+.bottom {
+    max-width: 100%;
+}
+.top { margin-bottom: 1rem;}
+.user {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.user .avatar {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: .5rem;
+    border-radius: 3rem;
+    border: 4px solid #b4b0e2;
+}
+.user .name{
+    color: #7f7782;
+}
+.box{
+    position: relative;
+    margin: 0 1rem;
+    padding: 1.2rem .5rem 1rem;
+    border: 3px dotted #96c5fa;
+    border-radius: .5rem;
+}
+.box .ribbon{
+    position: absolute;
+    left: 50%;
+    top: -1rem;
+    margin-left: -5rem;
+    width: 10rem;
+}
+.product{
+    margin-bottom: 2em;
+}
+.recommend{
+    margin-bottom: 1em;
+    border-color: #f8acb3;
+}
+.product-list{}
+.product-list li{}
+.product-list .title{
+    overflow: hidden;
+    line-height: 1.5rem;
+    color: #45374a;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+    font-weight: bold;
+}
+.product-list .pic{
+    float: left;
+    width: 4rem;
+    height: 4rem;
+    margin-right: .5rem;
+}
+.product-list .describe{
+    overflow : hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 0.8rem;
+    font-size: 0.8rem;
+    color: #7f7782;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+}
+/*style end*/

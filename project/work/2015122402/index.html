@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Bumps母婴】晒单有礼</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="top">
+        <img src="img/top.png">
+    </div>
+    <div class="user">
+        <img class="avatar" src="img/avatar.png" />
+        <div class="name">Bumps用户名</div>
+    </div>
+    <div class="box product">
+        <div class="ribbon"><img src="img/product-title.png"  /></div>
+        <ul class="product-list">
+            <li>
+                <div class="title">标题标题标题标题标题标题标题标题标题标题</div>
+                <div class="pic"><img src="img/temp/product.png"  /></div>
+                <div class="content">
+                    <p class="describe">KOSÉ 高丝 美白保湿面膜组 维C美白+玻尿酸保湿KOSÉ 高丝 美白保湿面膜组 维C美白+玻尿酸保湿</p>
+                    <span class="price">￥<i>168.00</i></span>
+                    <a href="#">去瞧一瞧</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="box recommend">
+        <div class="ribbon"><img src="img/more-title.png"  /></div>
+    </div>
+    <div class="bottom">
+        <img src="img/bottom.png">
+    </div>
+
+    <script>
+        //rem 随屏幕动态修整font-size
+        (function (doc, win) {
+          var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              if (!clientWidth) return;
+              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            };
+
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</body>
+</html>
