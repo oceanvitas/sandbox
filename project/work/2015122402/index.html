@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【Bumps母婴】晒单有礼</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
     <div class="top">
         <img src="img/top.png">
@@ -15,41 +17,109 @@
         <div class="name">Bumps用户名</div>
     </div>
     <div class="box product">
-        <div class="ribbon"><img src="img/product-title.png"  /></div>
+        <div class="ribbon"><img src="img/product-title.png" /></div>
         <ul class="product-list">
             <li>
                 <div class="title">标题标题标题标题标题标题标题标题标题标题</div>
-                <div class="pic"><img src="img/temp/product.png"  /></div>
+                <div class="pic"><img src="img/temp/product.png" /></div>
                 <div class="content">
                     <p class="describe">KOSÉ 高丝 美白保湿面膜组 维C美白+玻尿酸保湿KOSÉ 高丝 美白保湿面膜组 维C美白+玻尿酸保湿</p>
                     <span class="price">￥<i>168.00</i></span>
-                    <a href="#">去瞧一瞧</a>
+                    <a href="#" class="goto">去瞧一瞧</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">标题标题标题标题标题标题标题标题标题标题</div>
+                <div class="pic"><img src="img/temp/product.png" /></div>
+                <div class="content">
+                    <p class="describe">KOSÉ 高丝 美白保湿面膜组 维C美白+玻尿酸保湿KOSÉ 高丝 美白保湿面膜组 维C美白+玻尿酸保湿</p>
+                    <span class="price">￥<i>168.00</i></span>
+                    <a href="#" class="goto">去瞧一瞧</a>
                 </div>
             </li>
         </ul>
     </div>
     <div class="box recommend">
-        <div class="ribbon"><img src="img/more-title.png"  /></div>
+        <div class="ribbon"><img src="img/more-title.png" /></div>
+        <ul class="recommend-list">
+            <li>
+                <a href="#" class="pic"><img src="img/temp/more.png" /></a>
+                <a href="#" class="title">英国本土制造 300年历史 </a>
+                <p class="describe">牛栏婴儿配方奶粉4段900g（2-3岁适用） </p>
+                <span class="price">￥<i>159.00</i></span>
+            </li>
+            <li>
+                <a href="#" class="pic"><img src="img/temp/more.png" /></a>
+                <a href="#" class="title">英国本土制造 300年历史 </a>
+                <p class="describe">牛栏婴儿配方奶粉4段900g（2-3岁适用） </p>
+                <span class="price">￥<i>159.00</i></span>
+            </li>
+            <li>
+                <a href="#" class="pic"><img src="img/temp/more.png" /></a>
+                <a href="#" class="title">英国本土制造 300年历史 </a>
+                <p class="describe">牛栏婴儿配方奶粉4段900g（2-3岁适用） </p>
+                <span class="price">￥<i>159.00</i></span>
+            </li>
+            <li>
+                <a href="#" class="pic"><img src="img/temp/more.png" /></a>
+                <a href="#" class="title">英国本土制造 300年历史 </a>
+                <p class="describe">牛栏婴儿配方奶粉4段900g（2-3岁适用） </p>
+                <span class="price">￥<i>159.00</i></span>
+            </li>
+        </ul>
+    </div>
+    <div class="logo">
+        <img src="img/bumps.png">
     </div>
     <div class="bottom">
-        <img src="img/bottom.png">
+        <div class="code"><img src="img/code.png"></div>
+        <p class="describe">手机下单，首单即享免邮 更有118元迎新大礼包等你领！</p>
+        <a href="/apps/bumps/pc" class="download"></a>
     </div>
+    
+    <script type="text/javascript">
+    (function (doc, win) {
+        // body...
+    })(document, window);
+    </script>
 
-    <script>
-        //rem 随屏幕动态修整font-size
-        (function (doc, win) {
-          var docEl = doc.documentElement,
-            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-            recalc = function () {
-              var clientWidth = docEl.clientWidth;
-              if (!clientWidth) return;
-              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-            };
+    <script type="text/javascript">
+    //rem 随屏幕动态修整font-size
+    (function(doc, win) {
+        var dpr, rem, scale;
+        var docEl = document.documentElement;
+        var fontEl = document.createElement('style');
+        var metaEl = document.querySelector('meta[name="viewport"]');
 
-          if (!doc.addEventListener) return;
-          win.addEventListener(resizeEvt, recalc, false);
-          doc.addEventListener('DOMContentLoaded', recalc, false);
-        })(document, window);
+        dpr = window.devicePixelRatio || 1;
+        rem = docEl.clientWidth * dpr / 10;
+        scale = 1 / dpr;
+
+
+        // 设置viewport，进行缩放，达到高清效果
+        metaEl.setAttribute('content', 'width=' + dpr * docEl.clientWidth + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+
+        // 设置data-dpr属性，留作的css hack之用
+        docEl.setAttribute('data-dpr', dpr);
+
+        // 动态写入样式
+        docEl.firstElementChild.appendChild(fontEl);
+        fontEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
+
+        // 给js调用的，某一dpr下rem和px之间的转换函数
+        window.rem2px = function(v) {
+            v = parseFloat(v);
+            return v * rem;
+        };
+        window.px2rem = function(v) {
+            v = parseFloat(v);
+            return v / rem;
+        };
+
+        window.dpr = dpr;
+        window.rem = rem;
+    })(document, window);
     </script>
 </body>
+
 </html>
