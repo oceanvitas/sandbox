@@ -1,0 +1,214 @@
+/*初始动画*/
+.frame{ position: relative;}
+/*第0帧：锁屏*/
+.frame-0{}
+.frame-0 .items{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.frame-0 .status{
+  position: absolute;
+  top: .2rem;
+  left: 50%;
+  width: 9.7067rem;
+  height: .4rem;
+  margin-left: -4.8533rem;
+  background: url(../img/lock/status.png) no-repeat;
+  background-size: contain;
+}
+.frame-0 .time{
+  position: absolute;
+  top: 2.16rem;
+  left: 50%;
+  width: 5.5467rem;
+  height: 2.4333rem;
+  margin-left: -2.7733rem;
+  background: url(../img/lock/time.png) no-repeat;
+  background-size: contain;
+}
+.frame-0 .slider{
+  position: absolute;
+  top: 13.83rem;
+  left: 50%;
+  width: 3.76rem;
+  height: .64rem;
+  margin-left: -1.38rem;
+  background: url(../img/lock/slider.png) no-repeat;
+  background-size: contain;
+}
+.frame-0 .camera{
+  position: absolute;
+  right: .24rem;
+  bottom: .1867rem;
+  width: .72rem;
+  height: .56rem;
+  background: url(../img/lock/camera.png) no-repeat;
+  background-size: contain;
+}
+.frame-0 .top-menu{
+  position: absolute;
+  top: .2933rem;
+  left: 50%;
+  width: .96rem;
+  height: .1867rem;
+  margin-left: -.48rem;
+  background: url(../img/lock/smallMenu.png) no-repeat;
+  background-size: contain;
+}
+.frame-0 .bottom-menu{
+  position: absolute;
+  bottom: .2533rem;
+  left: 50%;
+  width: .96rem;
+  height: .1867rem;
+  margin-left: -.48rem;
+  background: url(../img/lock/smallMenu.png) no-repeat;
+  background-size: contain;
+}
+/*第1帧：解锁*/
+.frame-1 .numbers{
+  position: absolute;
+  top: 3.0133rem;
+  left: 1.4rem;
+  font-size: .53rem;
+}
+.frame-1 .number{
+  float: left;
+  width: .5467rem;
+  height: .4667rem;
+  margin-right: .12rem;
+  color: #9c96d5;
+  text-align: center;
+}
+.frame-1 .buttons{
+  position: absolute;
+  top: 4.9733rem;
+  left: 1.24rem;
+}
+.frame-1 .button{
+  float: left;
+  width: 2.0267rem;
+  height: 2.0267rem;
+  margin: 0 .72rem .4rem 0;
+  border-radius: 1.0133rem;
+}
+.frame-1 .button-0{
+  margin-left: 2.7467rem;
+}
+.frame-1 .cancel{
+  position: absolute;
+  right: 1.8rem;
+  bottom: .9067rem;
+  font-size: .4267rem;
+  color: #fff;
+}
+/*第2帧：主屏幕*/
+.frame-2 .status{
+  position: absolute;
+  top: .2rem;
+  left: 50%;
+  width: 9.7067rem;
+  height: .4rem;
+  margin-left: -4.8533rem;
+  background: url(../img/main/statusWithTime.png) no-repeat;
+  background-size: contain;
+}
+.frame-2 .app{
+  position: absolute;
+  top: .6667rem;
+  left: 50%;
+  width: 8.56rem;
+  height: 6.7467rem;
+  margin-left: -4.28rem;
+  background: url(../img/main/app.png) no-repeat;
+  background-size: contain;
+}
+.frame-2 .menu{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10rem;
+  height: 2.8667rem;
+  background: url(../img/main/bottomMenu.png) no-repeat;
+  background-size: contain;
+}
+
+.pop-box .mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+}
+.pop-box .pop{
+  position: absolute;
+  top: 5.8533rem;
+  left: 50%;
+  width: 7.2rem;
+  margin-left: -3.6rem;
+  text-align: center;
+}
+.pop-box .pop-inner{
+  overflow: hidden;
+  height: 2.08rem;
+  background: rgba(255, 255, 255, .95);
+  margin-bottom: 1px;
+  padding-top: .2667rem;
+  border-radius: .1rem .1rem 0 0;
+  color: #000;
+}
+.pop-box .title{
+  font-size: .45rem;
+  line-height: .9333rem;
+  font-weight: bold;
+}
+.pop-box .txt{
+  font-size: .35rem;
+}
+.pop-box .button{
+  height: 1.16rem;
+  line-height: 1.16rem;
+  background: rgba(255, 255, 255, .95);
+  border-radius:  0 0 .1rem .1rem;
+  color: #017aff;
+  font-size: .45rem;
+  font-weight: bold;
+}
+/*第3帧：微信*/
+.frame-3{}
+.frame-3 .topic{
+  position: absolute;
+}
+.frame-3 .topic-0{
+  top: 1.7867rem;
+  left: .2667rem;
+  width: 7.89rem;
+  height: 2.17rem;
+  background: url(../img/weixin/topic0.png) no-repeat;
+  background-size: contain;
+}
+.frame-3 .topic-1{
+  top: 4.52rem;
+  right: .2667rem;
+  width: 6.52rem;
+  height: 1.09rem;
+  background: url(../img/weixin/topic1.png) no-repeat;
+  background-size: contain;
+}
+.frame-3 .topic-2{
+  top: 6.173rem;
+  left: .2667rem;
+  width: 7.04rem;
+  height: 2.48rem;
+  background: url(../img/weixin/topic2.png) no-repeat;
+  background-size: contain;
+}
+
+

@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Js错误捕获</title>
-    <script type="text/javascript">
-    /**
-     * @param {String}  errorMessage   错误信息
-     * @param {String}  scriptURI      出错的文件
-     * @param {Long}    lineNumber     出错代码的行号
-     * @param {Long}    columnNumber   出错代码的列号
-     * @param {Object}  errorObj       错误的详细信息，Anything
-     */
-    window.onerror = function(
-      errorMessage,
-      scriptURI,
-      lineNumber,
-      columnNumber,
-      error
-    ) {
-      if (error) {
-        reportError(error);
-      } else {
-        reportError({
-          message: errorMessage,
-          script: scriptURI,
-          line: lineNumber，
-          column: columnNumber
-        });
-      }
-    }
+  <meta charset="utf-8">
+  <title>Js错误捕获</title>
+  <script type="text/javascript" src="js/tingyun.js"></script>
 
-    function reportError (error) {
-      //输出
-      console.log("错误信息：" , error.errorMessage);
-      console.log("出错文件：" , error.scriptURI);
-      console.log("出错行号：" , error.lineNumber);
-      console.log("出错列号：" , error.columnNumber);
-      console.log("错误详情：" , error.errorObj);
-      //在此处理错误信息，收集或者提交
-    }
-    </script>
 </head>
 <body>
-    <script type="text/javascript" src="js/error.js"></script>
+  <img src="http://static.fourb.info/web/mw/act/20160107/img/animate2.png" >
+  <img src="http://static.fourb.info/web/mw/act/20160107/img/animate3.png" >
+  <!--<script type="text/javascript" src="js/pageMessageCollection.js"></script>-->
+  <script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/error.js"></script>
+  <script type="text/javascript">
+  $('img').on('error', function(img) {
+     throw new Error('404:'+img.target.currentSrc); 
+  })
+  /*function img404 (img) {
+    throw new Error('404:'+img.src);
+  }*/
+  </script>
 </body>
 </html>
