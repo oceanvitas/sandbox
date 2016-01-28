@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parent Frame</title>
-    <script>
-      window.addEventListener('beforeunload', function(event) {
-        console.log('I am the 1st one.');
-      });
-      window.addEventListener('unload', function(event) {
-        console.log('I am the 3rd one.');
-      });
-    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test unload</title>
   </head>
   <body>
-    <iframe src="child-frame.html"></iframe>
+    <ul class="test">
+    </ul>
+    <script type="text/javascript">
+      document.querySelector('.test').innerHTML = 
+      'document.unload:'+localStorage.getItem('document.unload') + '\n' +
+      'window.onbeforeunload:'+localStorage.getItem('window.onbeforeunload') + '\n' +
+      'window.onunload:'+localStorage.getItem('window.onunload') + '\n' +
+      'addEventListener.beforeunload:'+localStorage.getItem('addEventListener.beforeunload') + '\n' +
+      'addEventListener.unload:'+localStorage.getItem('addEventListener.unload') + '\n';
+
+      document.unload = function (argument) {
+        localStorage.setItem('document.unload', true)
+      }
+      window.onbeforeunload = function (argument) {
+        localStorage.setItem('window.onbeforeunload', true)
+      }
+      window.onunload = function (argument) {
+        localStorage.setItem('window.onunload', true)
+      }
+      window.addEventListener('beforeunload', function (argument) {
+        localStorage.setItem('addEventListener.beforeunload', true)
+      }, false)
+      window.addEventListener('unload', function (argument) {
+        localStorage.setItem('addEventListener.unload', true)
+      }, false)
+      
+    </script>
   </body>
 </html>

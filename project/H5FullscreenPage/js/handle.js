@@ -49,12 +49,12 @@ $(function() {
 			var index = dom.getAttribute('data-id');
 			console.log(index)
 			if (index == 1) {
-				globalSym.one.playAll();
+				//globalSym.one.playAll();
 				console.log('one replay')
 			}
 			if (index == 2) {
 				if (globalSym.two != undefined) {
-					globalSym.two.playAll();
+					//globalSym.two.playAll();
 					console.log('two replay')
 				} else {
 					//第二个动画

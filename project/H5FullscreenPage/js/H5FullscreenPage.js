@@ -136,6 +136,7 @@
           
          function touchStart(event) {
             if (dragStart !== null) return;
+            event = event.originalEvent;
             var item = $(event.target).closest('.item');
              if (!item.length) {
                  $('.overlay').hide();
@@ -155,6 +156,7 @@
          }
           
          function touchMove (event) {
+            event = event.originalEvent;
              //console.log(33);
             //防止ios拖动事件
             event.preventDefault();
@@ -192,6 +194,7 @@
          }
           
          function touchEnd (event) {
+            event = event.originalEvent;
             //防止多次滚动，故增加一个覆盖层
             $('.overlay').show();
             dragStart = null;
@@ -291,7 +294,7 @@
          }
          function orderPart(dom){
             var parts = $(dom).find('.part');
-            parts.forEach(function(item){
+            parts.each(function(index, item){
                 var time = $(item).attr('data-delay') || 100;
                 setTimeout(function(){
                     $(item).removeClass('hide');
@@ -324,7 +327,7 @@
                     
                     var max = 5;
                     var items = $('.parallax');
-                    items.forEach(function(item){
+                    items.each(function(index, item){
                         var dx = (item.getBoundingClientRect().width/max)*(x / halfWidth);
                         var dy = (item.getBoundingClientRect().width/max)*(y / halfHeight);
                         
