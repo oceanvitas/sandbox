@@ -32,3 +32,38 @@ function typeOf(o){
 function isNumber (value) {
   return typeof value === 'number' && isFinite(value);
 }
+
+/**
+ * 合并排序
+ * 迭代
+ */
+function merge (left, right) {
+  var result = [];
+  while(left.length > 0 && right.length > 0){
+    if(left[0] < right[0]){
+      result.push(left.shift());
+    }else{
+      result.push(right.shift());
+    }
+  }
+  return result.concat(left).concat(right);
+}
+function mergeSort (items) {
+  if(items.length == 1){
+    return items;
+  }
+  var work = [];
+  for (var i = 0, len = items.length; i < len; i++) {
+    work.push([items[i]]);
+  };
+  work.push([]);
+  for (var lim = len; lim > 1; lim = (lim + 1) /2) {
+    for(var j = 0, k = 0; k < lim; j++, k += 2){
+      work[j] = merge(work[k], work[k + 1]);
+    }
+    //原代码bug,如果第二层循环最后一个是work[k] < work[k + 1],
+    //则work[j]已为空，应置空work[j+1]
+    work[j] = work[j + 1] = [];
+  }
+  return work[0];
+}
