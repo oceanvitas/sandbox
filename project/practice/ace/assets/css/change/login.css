@@ -1,0 +1,14 @@
+.login-layout { background-color: #fff;}
+.login-container{ width: auto;}
+.login-box-style{
+  min-height: 330px;
+  margin-top: 10px;
+}
+.login-layout .widget-box{
+  min-height: 200px;
+  border: 8px solid #F5F3F0;
+  border-radius: 10px;
+  background: #fff;
+}
+.login-layout .widget-box .widget-main{ background: #fff;}
+.hr-mb{ margin-bottom: 45px;}
