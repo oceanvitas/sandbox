@@ -1,0 +1,41 @@
+div{
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+}
+.outline{
+  background: yellowgreen;
+  border: 10px solid #655;
+  outline: 3px dashed deeppink;
+  outline-offset: 5px;
+}
+.background-origin{
+  padding: 10px;
+  background: url(../images/closeBtn.png) no-repeat #58a;
+  background-position: calc(100% - 20px) calc(100% - 10px);
+}
+.border-inner-fillet{
+  background: tan;
+  border-radius: .8em;
+  padding: 1em;
+  box-shadow: 0 0 0 .6em #655;
+  outline: .6em solid #655;
+}
+.stripe{
+  background: linear-gradient(#fb3 30%, #58a 30%);
+  background-size: 100% 30px;
+}
+.round{
+  background: #655;
+  background-image: radial-gradient(tan 30%, transparent 0);
+  background-size: 30px 30px;
+}
+.random{
+  width: 400px;
+  background: hsl(20, 40%, 90%);
+  background-image:
+  linear-gradient(90deg, #fb3 10px, transparent 0),
+  linear-gradient(90deg, #ab4 20px, transparent 0),
+  linear-gradient(90deg, #655 20px, transparent 0);
+  background-size: 80px 100%, 60px 100%, 40px 100%;
+}
