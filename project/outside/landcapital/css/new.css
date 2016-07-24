@@ -1,0 +1,19 @@
+.k-zyxm .nav{ float:left; width:250px; margin-left:-100%;}
+		.k-zyxm .nav a{ display:block; font-size:20px; line-height:25px; text-align: left; padding:10px 0px 10px 20px;background:url(../img/icon/line.png) left center no-repeat;}
+		.k-zyxm .nav a:hover{ color:#949494;}
+        .k-zyxm .nav a.on{ color:#fa7903;}
+	.k-zyxm .main{ float:left; width:100%;}
+		.k-zyxm .main-box{ margin-left:300px;}
+		.k-zyxm .item ul{ float: right; margin: 0; width: 75%;}
+
+
+
+.k-arc .nav{ float:left; width:250px; margin-left:-100%;}
+		.k-arc .nav a{ display:block; font-size:20px; line-height:25px; padding:10px 0px 10px 20px;background:url(../img/icon/line.png) left center no-repeat;}
+		.k-arc .nav a:hover{ color:#949494;}
+        .k-arc .nav a.on{ color:#fa7903;}
+        	.k-arc .nav ul a{
+        		background: none;
+        		padding-left: 20px;
+        		font-size:18px; 
+        	}

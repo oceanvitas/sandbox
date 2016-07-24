@@ -1,0 +1,369 @@
+.box {
+	overflow: hidden;
+	position: relative;
+	width: 600px;
+	height: 314px;
+	background: #1b2e4f;
+	margin: 30px auto;
+}
+.item {
+	position: absolute;
+	overflow: hidden;
+	z-index: 2;
+	width: 207px;
+	text-align: center;
+}
+.pic {
+	overflow: hidden;
+	width: 100%;
+	height: 207px;
+}
+
+.medal {
+	width: 207px;
+	height: 207px;
+	transform-origin: top center;
+}
+.name {
+	line-height: 36px;
+	font-size: 24px;
+}
+.state {
+	line-height: 36px;
+	color: #fff;
+	font-size: 18px;
+}
+
+
+.item__gold {
+	top: 22px;
+	left: 198px;
+	width: 207px;
+}
+	.item__gold .name {
+		color: #fff130;
+	}
+	.item__gold .pic {
+		height: 207px;
+	}
+	.item__gold .medal {
+		background: url(../img/sprite-prizes.png) 0 0 no-repeat;
+		transform: scale(1, 1) translate(0, 0);
+	}
+
+.item__sliver {
+	top: 47px;
+	left: 430px;
+	width: 150px;
+}
+	.item__sliver .name {
+		color: #bdc5ee;
+	}
+	.item__sliver .pic {
+		height: 150px;
+	}
+	.item__sliver .medal {
+		background: url(../img/sprite-prizes.png) 0 -240px no-repeat;
+		transform: scale(.72, .72) translate(-19%, 0);
+	}
+
+.item__copper {
+	top: 47px;
+	left: 20px;
+	width: 150px;
+}
+	.item__copper .name {
+		color: #ffb534;
+	}
+	.item__copper .pic {
+		height: 150px;
+	}
+	.item__copper .medal {
+		background: url(../img/sprite-prizes.png) 0 -480px no-repeat;
+		transform: scale(.72, .72) translate(-19%, 0);
+	}
+
+.item__gold.item__active .medal {
+	background-position: -240px 0;
+}
+
+.item__sliver.item__active .medal {
+	background-position: -240px -240px;
+}
+
+.item__copper.item__active .medal {
+	background-position: -240px -480px;
+}
+
+.item__gold.item__animate .medal {
+	animation: gold .7s steps(1);
+}
+
+.item__sliver.item__animate .medal {
+	animation: sliver .7s steps(1);
+}
+
+.item__copper.item__animate .medal {
+	animation: copper .7s steps(1);
+}
+
+
+.item__0-1 {
+	animation: item0-1 1s forwards;
+}
+.item__0-2 {
+	z-index: 1;
+	animation: item0-2 1s forwards;
+}
+.item__1-0 {
+	animation: item1-0 1s forwards;
+}
+.item__1-2 {
+	animation: item1-2 1s forwards;
+}
+.item__2-0 {
+	z-index: 1;
+	animation: item2-0 1s forwards;
+}
+.item__2-1 {
+	animation: item2-1 1s forwards;
+}
+
+.item__0-1.item__animate .medal,
+.item__2-1.item__animate .medal {
+	transform: scale(1, 1) translate(0, 0);
+}
+.item__1-0.item__animate .medal,
+.item__1-2.item__animate .medal {
+	transform: scale(.72, .72) translate(-19%, 0);
+}
+
+	.item__0-1 .pic,
+	.item__2-1 .pic {
+		animation: pic__small-big 1s forwards;
+	}
+	.item__0-1 .medal,
+	.item__2-1 .medal {
+		animation: medal__small-big 1s forwards;
+	}
+	.item__1-0 .pic,
+	.item__1-2 .pic {
+		animation: pic__big-small 1s forwards;
+	}
+	.item__1-0 .medal,
+	.item__1-2 .medal {
+		animation: medal__big-small 1s forwards;
+	}
+	.item__2-0 .pic,
+	.item__0-2 .pic {
+		animation: pic__small-small 1s forwards;
+	}
+	.item__2-0 .medal,
+	.item__0-2 .medal {
+		animation: medal__small-small 1s forwards;
+	}
+
+
+@keyframes item0-1 {
+	from {
+		top: 47px;
+		left: 20px;
+		width: 150px;
+	}
+  to {
+		top: 22px;
+		left: 198px;
+		width: 207px;
+  }
+}
+@keyframes item0-2 {
+	from {
+		top: 47px;
+		left: 20px;
+		width: 150px;
+	}
+  to {
+		top: 47px;
+		left: 430px;
+		width: 150px;
+  }
+}
+@keyframes item1-0 {
+	from {
+		top: 22px;
+		left: 198px;
+		width: 207px;
+	}
+  to {
+		top: 47px;
+		left: 20px;
+		width: 150px;
+  }
+}
+@keyframes item1-2 {
+	from {
+		top: 22px;
+		left: 198px;
+		width: 207px;
+	}
+  to {
+		top: 47px;
+		left: 430px;
+		width: 150px;
+  }
+}
+@keyframes item2-0 {
+	from {
+		top: 47px;
+		left: 430px;
+		width: 150px;
+	}
+  to {
+		top: 47px;
+		left: 20px;
+		width: 150px;
+  }
+}
+@keyframes item2-1 {
+	from {
+		top: 47px;
+		left: 430px;
+		width: 150px;
+	}
+  to {
+		top: 22px;
+		left: 198px;
+		width: 207px;
+  }
+}
+
+
+@keyframes pic__small-big {
+	from {
+		height: 150px;
+  }
+  to {
+		height: 207px;
+  }
+}
+@keyframes medal__small-big {
+  from {
+		transform: scale(.72, .72) translate(-19%, 0);
+  }
+  to {
+  	transform: scale(1, 1) translate(0, 0);
+  }
+}
+@keyframes pic__big-small {
+	from {
+		height: 207px;
+  }
+  to {
+		height: 150px;
+  }
+}
+@keyframes medal__big-small {
+  from {
+  	transform: scale(1, 1) translate(0, 0);	
+  }
+  to {
+  	transform: scale(.72, .72) translate(-19%, 0);
+  }
+}
+@keyframes pic__small-small {
+	from {
+		height: 150px;
+  }
+  to {
+		height: 150px;
+  }
+}
+@keyframes medal__small-small {
+  from {
+  	transform: scale(.72, .72) translate(-19%, 0);
+  }
+  to {
+  	transform: scale(.72, .72) translate(-19%, 0);
+  }
+}
+
+@keyframes gold {
+  12.5% {
+  	background-position: -480px 0;
+  }
+  25% {
+  	background-position: -720px 0;
+  }
+  37.5% {
+  	background-position: -960px 0;
+  }
+  50% {
+  	background-position: -1200px 0;
+  }
+  62.5% {
+  	background-position: -1440px 0;
+  }
+  75% {
+  	background-position: -1680px 0;
+  }
+  87.5% {
+  	background-position: -1920px 0;
+  }
+  100% {
+  	background-position: -240px 0;
+  }
+}
+
+@keyframes sliver {
+  12.5% {
+  	background-position: -480px -240px;
+  }
+  25% {
+  	background-position: -720px -240px;
+  }
+  37.5% {
+  	background-position: -960px -240px;
+  }
+  50% {
+  	background-position: -1200px -240px;
+  }
+  62.5% {
+  	background-position: -1440px -240px;
+  }
+  75% {
+  	background-position: -1680px -240px;
+  }
+  87.5% {
+  	background-position: -1920px -240px;
+  }
+  100% {
+  	background-position: -240px -240px;
+  }
+}
+
+@keyframes copper {
+  12.5% {
+  	background-position: -480px -480px;
+  }
+  25% {
+  	background-position: -720px -480px;
+  }
+  37.5% {
+  	background-position: -960px -480px;
+  }
+  50% {
+  	background-position: -1200px -480px;
+  }
+  62.5% {
+  	background-position: -1440px -480px;
+  }
+  75% {
+  	background-position: -1680px -480px;
+  }
+  87.5% {
+  	background-position: -1920px -480px;
+  }
+  100% {
+  	background-position: -240px -480px;
+  }
+}
