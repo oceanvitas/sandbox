@@ -16,7 +16,7 @@
 #### isomorphic
 
 + React.js
->全局定义：__DEV__, Object.assign
+> 全局定义：__DEV__, Object.assign
 
 渲染
 ========
@@ -27,6 +27,6 @@
 
 + CreateElement (src/isomorphic/classic/element/ReactElement.js)
 > ReactElement.createElement = function(type, config. children){
->
-> }
 > 
+> }
+> test
