@@ -166,7 +166,32 @@
 
 > src/renderers/dom/stack/client/ReactDOMComponents.js
 
-当`render`的过程开始执行到`_renderNewRootComponent`时，在这个方法中除了
+当`render`的过程开始执行到`_renderNewRootComponent`时，在这个方法中除了`batchedUpdates`,还有非常重要的一步，那就是将之前`ReactElement`元素对象，传入`instantiateReactComponent`中来创建`DOMComponent`对象。
+	
+	var componentInstance = instantiateReactComponent(nextElement);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
